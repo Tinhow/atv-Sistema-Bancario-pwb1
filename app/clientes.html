@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+        <br>
+        <label for="tipoConta">Tipo de Conta:</label>
+        <select id="tipoConta" name="tipoConta">
+            <option value="corrente">Conta Corrente</option>
+            <option value="poupança">Poupança</option>
+            <option value="bonificada">Conta Bonificada</option>
+        </select>
+        <br>
+        <button type="button" onclick="clienteController.inserir(event)">Inserir Cliente</button>
+    </form>
+    <br>
+    <h2>Lista de Clientes</h2>
+    <div id="lista-clientes"></div>
+    <br>
+    <form>
+        <label for="lista-clientes">lista-clientes</label>
+        <button type="button" onclick="clienteController.listar()">Listar Clientes</button>
+    </form>
+    <script src="js/model/cliente.js"></script>
+    <script src="js/model/clientes.js"></script>
+    <script src="js/model/conta.js"></script>
+    <script src="js/model/conta-bonificada.js"></script>
+    <script src="js/model/poupanca.js"></script>
+    <script src="js/model/contas.js"></script>
+    <script src="js/controller/cliente-controller.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
